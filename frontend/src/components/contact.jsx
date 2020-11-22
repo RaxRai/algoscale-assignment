@@ -12,10 +12,10 @@ function Contact(props) {
     const ValidateEmail=(mail)=>{
         let emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (mail.match(emailformat)) {
-            alert("Nice Email!")
+            alert("Data Submitted")
               return true;
         };
-        alert("That's not an email?!")
+        alert("Please enter correct email?!")
         return (false);
     };
 
@@ -24,7 +24,6 @@ function Contact(props) {
     }
     const handleSubmit =()=>{
         if(!ValidateEmail(email)){
-            console.log("not valid");
             return;
         }
         let newFormdata = {
