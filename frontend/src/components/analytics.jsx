@@ -19,7 +19,7 @@ export default function Analytics(props){
     return (
         <div className="analytics">
             {data.map((item)=>(
-                <Card item={item} />
+                <Card key={item._id} item={item} />
             ))}
 
         </div>
